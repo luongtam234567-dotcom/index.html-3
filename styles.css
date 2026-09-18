@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;          /* 100 */
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 auto;   /* 20px */
+  border: 2px solid lightblue;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 21px;
+}
+
+nav {
+  width: 100%;
+  /* max-width: 1500px; */
+  display: flex;
+  justify-content: space-between;
+  background-color: #8782b9;
+  padding: 10px 0;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.row {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 12px;
+    /* border: 2px solid lightblue; */
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button {
+    cursor: pointer;
+}
+
+/* NAVIGATION */
+
+.nav__logo {
+    display: flex;
+    width: 17%;
+    margin-left: 20px;
+}
+
+.nav__link--list {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin-right: 20px;
+   
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    margin: 26px;
+    /* border: 1px solid red; */
+}
+
+.nav__link--anchor {
+    color: black;
+    font-size: 21px;
+    font-weight: 500;
+    flex-direction: row;
+}
+
+.link__hover-effect {
+    position: relative;
+}
+
+.link__hover-effect::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.click {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.click:hover {
+    transform: scale(1.2);
+}
+
+.click:active {
+   transform: scale(0.1);
+}
+
+.link__hover-effect--black {
+    color: black;
+    /* text-decoration: none; */
+}
+
+.nav__link--primary {
+    width: 100%;
+    padding: 10px 27px;
+    background-color: #ffe41b;
+    border-radius: 12px;
+    border: none;
+    font-size: 21px;
+    font-weight: 600;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.nav__link--one {
+   font-size: 21px;
+   font-weight: 500;
+   text-decoration: none;
+   color: black;
+   margin-right: -12px;
+   margin-left: 80px;
+}
+.nav__link--primary:hover {
+    background-color: #d4a70c;
+    color: white;
+    transition: all 300ms ease-in;
+}
+
+.link__hover-effect--black:hover::after {
+    transform: scaleX(1);
+    transform-origin: top left;
+}
+
+/* HEADER */
+
+.contaniner {
+  width: 100%;
+  /* max-width: 1500px; */
+  /* max-width: 1200px; */
+} 
+
+.header__title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.header__title--main {
+    font-size: 80px;
+    font-weight: 700;
+    font-family: arial narrow, sans-serif;
+}
+
+.inves-color {
+    padding: 0px 12px;
+    border: 2px solid black;
+    background-color: #87953c;
+    color: white;
+    border-radius: 12px;
+    font-style: italic;
+}
+
+.inves-para {
+    margin-top: 55px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color:  #8782b9;
+}
+
+.btn__investors {
+ text-align: center;
+ margin-top: 34px;
+}
+
+.btn__one {
+    margin-right: 24px;
+    margin-left: 24px;
+    margin-bottom: 12px;
+    padding: 20px;
+    background-color: #ffe41b;
+    border-radius: 7px;
+    font-size: 23px;
+    font-style: italic;
+   
+}
+
+.btn__one:active {
+    opacity: 0.3;
+}
+
+.btn__one:hover {
+    color: white;
+    background-color: #d4a70c;
+    transition: all 300ms ease-in;
+} 
+
+.inves__star {
+    position: relative;
+    right: 1%;
+}
+
+/* MAIN INVES HOUSE */
+
+.inves__home {
+   text-align: center;
+   margin-top: 120px;  
+}
+
+.header__two-house {
+   font-size: 80px;
+   font-family: arial narrow, sans-serif;
+}
+
+.invest-para {
+    font-size: 29px;
+    font-weight: 500;
+    margin-top: 9px;
+    color:  #8782b9;
+}
+
+/* CARD INVEST */
+
+.card__invested {
+    display: flex;
+    margin-top: 60px;
+    border: 4px solid lightcoral;
+    width: 100%;
+}
+
+
+.card__home { 
+    margin: 25px;
+    /* border: 4px solid green; */
+}
+
+.card__home-image {
+    width: 100%;
+    display: flex;
+    border: 4px solid #1c0080;
+    /* position: relative; */
+}
+
+.image__home {
+    width: 100%;
+}
+
+
+.description__title {
+    border: 2px solid rgb(214, 37, 99);
+    text-align: center;
+    /* position: absolute; */
+}
+
+.title-one {
+    font-size: 40px;
+}
+
+.title-two {
+    font-size: 25px;
+    margin-top: 11px;
+}
+
+.para__invesment {
+    /* width: 40%; */
+    font-size: 30px;
+    margin-top: 11px;
+    line-height: 1.5;
+}
