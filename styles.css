@@ -6,6 +6,9 @@
   padding: 0;
 }
 
+html {
+    font-size: 62.5%;
+}
 .container {
   width: 100%;          /* 100 */
   max-width: 2000px;
@@ -31,7 +34,7 @@ nav {
   /* max-width: 1500px; */
   display: flex;
   justify-content: space-between;
-  background-color: #8782b9;
+  background-color: #110955;             /* #8782b9; */ /* #110955;*/
   padding: 10px 0;
   align-items: center;
 }
@@ -58,6 +61,14 @@ a {
     cursor: pointer;
 }
 
+b {
+    color:#c56cbb
+}
+
+label {
+    overflow: hidden;
+}
+
 /* NAVIGATION */
 
 .nav__logo {
@@ -71,7 +82,6 @@ a {
     text-align: center;
     display: flex;
     margin-right: 20px;
-   
 }
 
 .nav__link {
@@ -86,6 +96,7 @@ a {
     font-size: 21px;
     font-weight: 500;
     flex-direction: row;
+    /* border: 4px solid red; */
 }
 
 .link__hover-effect {
@@ -120,7 +131,7 @@ a {
 }
 
 .link__hover-effect--black {
-    color: black;
+    color: white;
     /* text-decoration: none; */
 }
 
@@ -140,7 +151,7 @@ a {
    font-size: 21px;
    font-weight: 500;
    text-decoration: none;
-   color: black;
+   color: white;
    margin-right: -12px;
    margin-left: 80px;
 }
@@ -172,24 +183,25 @@ a {
 .header__title--main {
     font-size: 80px;
     font-weight: 700;
+    color: #110955;
     font-family: arial narrow, sans-serif;
 }
 
 .inves-color {
     padding: 0px 12px;
     border: 2px solid black;
-    background-color: #87953c;
+    background-color: #c385d8;
     color: white;
     border-radius: 12px;
     font-style: italic;
 }
 
 .inves-para {
-    margin-top: 55px;
-    font-size: 30px;
+    line-height: 1.2;
+    font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 500;
-    color:  #8782b9;
+    color: #110955;
 }
 
 .btn__investors {
@@ -203,10 +215,22 @@ a {
     margin-bottom: 12px;
     padding: 20px;
     background-color: #ffe41b;
-    border-radius: 7px;
+    border-radius: 10px;
     font-size: 23px;
     font-style: italic;
    
+}
+
+.btn__inves-one {
+    margin-right: 24px;
+    margin-left: 24px;
+    margin-bottom: 12px;
+    padding: 20px;
+    background-color: white;
+    border: 4px solid #110955;
+    border-radius: 10px;
+    font-size: 23px;
+    font-style: italic;
 }
 
 .btn__one:active {
@@ -219,6 +243,10 @@ a {
     transition: all 300ms ease-in;
 } 
 
+.btn__inves-one:hover {
+    color: rgb(144, 22, 206);
+    transition: all 300ms ease-in;
+}
 .inves__star {
     position: relative;
     right: 1%;
@@ -233,14 +261,15 @@ a {
 
 .header__two-house {
    font-size: 80px;
+   color: #110955;
    font-family: arial narrow, sans-serif;
 }
 
 .invest-para {
-    font-size: 29px;
+    font-size: 35px;
     font-weight: 500;
     margin-top: 9px;
-    color:  #8782b9;
+    color: #110955;
 }
 
 /* CARD INVEST */
@@ -248,8 +277,9 @@ a {
 .card__invested {
     display: flex;
     margin-top: 60px;
-    border: 4px solid lightcoral;
+    /* border: 4px solid rgb(14, 1, 1); */
     width: 100%;
+    max-width: max-content;
 }
 
 
@@ -263,6 +293,7 @@ a {
     display: flex;
     border: 4px solid #1c0080;
     /* position: relative; */
+    margin-top: 23px;
 }
 
 .image__home {
@@ -271,7 +302,7 @@ a {
 
 
 .description__title {
-    border: 2px solid rgb(214, 37, 99);
+    border: 2px solid black;
     text-align: center;
     /* position: absolute; */
 }
@@ -290,4 +321,105 @@ a {
     font-size: 30px;
     margin-top: 11px;
     line-height: 1.5;
+}
+
+/* CONSTRUCTION HOUSING */
+
+.construction {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.construction__house {
+    display: block;
+    border: 2px solid red;
+    text-align: center;
+    margin-top: 120px;
+    line-height: 1.3;
+}
+
+.feature__construction-one {
+    font-size: 8rem;
+    font-family: arial narrow, sans-serif;
+    color: #110955;
+}
+
+.para__construction-two {
+    font-size: 3.8rem;
+    font-weight: 500;
+    color: #110955;
+}
+
+.projects__form {
+    display: block;
+    position: absolute;
+    margin-top: 50px;
+    border: 2px solid green;
+    padding-right: 100px;
+}
+
+.form__contact {
+    font-size: 4rem;
+    color: rgb(27, 25, 25);
+    font-style: italic;
+}
+
+.inves__form-list {
+   display: block;
+   gap: 45px;
+}
+
+.link__form-one,
+.link__form-two {
+   width: 50%;
+}
+
+.form__label-one {
+    display: flex;
+    /* border: 2px solid green; */
+    align-items: flex-start;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form__input-one {
+    display: flex;
+    width: 100%;
+    padding: 5px 12px 5px 0px;
+    font-size: 16px;
+    margin-bottom: 19px;
+    border-top: none;
+    border-right: none;
+    border-left: none;   
+}
+
+
+.form__label-two {
+    display: flex;
+    /* border: 2px solid green; */
+    align-items: flex-start;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form__input-two {
+    display: flex;
+    width: 100%;
+    padding: 5px 12px 5px 0px;
+    font-size: 16px;
+    margin-bottom: 19px;
+    border-top: none;
+    border-right: none;
+    border-left: none;   
+}
+
+.form__input-one.click:hover {
+    border: none;
+}
+
+.inves__form-list:active {
+    border-color: none;
 }
