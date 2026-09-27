@@ -512,63 +512,59 @@ textarea {
     bottom: 15%
 }
 
-.contruction-build {
-    margin-top: 40px;
-    width: 70%;
+
+.construction__image-wrapper {
     position: relative;
+    width: 70%;
+    margin-top: 40px;
+}
+
+.contruction-build {
+    width: 100%;
+    margin: 0;
     border-radius: 20px;
-    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
     overflow: hidden;
+    transition: opacity 300ms ease;
 }
 
-.contruction-build:hover {
-    opacity: 0;
-    position: absolute;
-}
-
-.image__plan-house:hover {
-   box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
-   opacity: 1;
+.image__plan-house {
+    display: block;
+    width: 100%;
 }
 
 .description__contruction-house {
-    display: inline-block;
-    width: 50%;
-    text-align: left;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease;
 }
 
 .funiture__wrapper {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    /* width: 90%; */
-    opacity: 0;
-}
-
-.image__plan-house:hover, .funiture-plans {
+    position: static;
+    transform: none;
     opacity: 1;
-}
-
-.funiture-plans {
-    position: relative;
-    top: 50%;
-}
-
-.funiture-plans:hover {
-    opacity: 1;
-}
-
-.description__para:hover {
-    opacity: 1;
-    z-index: 100;
+    width: 80%;
+    text-align: center;
 }
 
 .description__para {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  /* transform: translate(-50%, -50%); */
-  /* width: 90%; */
-  opacity: 0;
+    position: static;
+    opacity: 1;
+}
+
+.construction__image-wrapper:hover {
+    opacity: 1;
+}
+
+.construction__image-wrapper:hover .contruction-build {
+    opacity: 0;
+}
+
+.construction__image-wrapper:hover .description__contruction-house {
+    opacity: 1;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
 }
