@@ -9,9 +9,10 @@
 html {
     font-size: 62.5%;
 }
+
 .container {
   width: 100%;          /* 100 */
-  max-width: 2000px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 0 auto;   /* 20px */
   border: 2px solid lightblue;
@@ -67,6 +68,18 @@ b {
 
 label {
     overflow: hidden;
+}
+
+input:hover, textarea:hover {
+    border-color: rgb(255, 98, 0);;
+}
+
+input:focus, textarea:focus {
+    border-color: #7ee80c;
+}
+
+textarea {
+    overflow: auto;
 }
 
 /* NAVIGATION */
@@ -247,6 +260,7 @@ label {
     color: rgb(144, 22, 206);
     transition: all 300ms ease-in;
 }
+
 .inves__star {
     position: relative;
     right: 1%;
@@ -274,6 +288,11 @@ label {
 
 /* CARD INVEST */
 
+/* .contaner {
+    width: 100%;
+    max-width: 2200px;
+} */
+
 .card__invested {
     display: flex;
     margin-top: 60px;
@@ -284,7 +303,7 @@ label {
 
 
 .card__home { 
-    margin: 25px;
+    margin: 24px;
     /* border: 4px solid green; */
 }
 
@@ -298,6 +317,8 @@ label {
 
 .image__home {
     width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
 
@@ -333,7 +354,7 @@ label {
 
 .construction__house {
     display: block;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     text-align: center;
     margin-top: 120px;
     line-height: 1.3;
@@ -351,75 +372,203 @@ label {
     color: #110955;
 }
 
+/* CONTACT FORM */
+
 .projects__form {
-    display: block;
-    position: absolute;
-    margin-top: 50px;
-    border: 2px solid green;
-    padding-right: 100px;
+    width: 100%;
+    margin: 50px auto 0;
+    padding: 40px;
+    border: 2px solid #110955;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
 }
 
 .form__contact {
-    font-size: 4rem;
-    color: rgb(27, 25, 25);
+    font-size: 3rem;
+    color: #1b1919;
     font-style: italic;
+    margin-bottom: 35px;
 }
 
 .inves__form-list {
-   display: block;
-   gap: 45px;
-}
-
-.link__form-one,
-.link__form-two {
-   width: 50%;
-}
-
-.form__label-one {
-    display: flex;
-    /* border: 2px solid green; */
-    align-items: flex-start;
-    margin-bottom: 5px;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.form__input-one {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
     width: 100%;
-    padding: 5px 12px 5px 0px;
-    font-size: 16px;
-    margin-bottom: 19px;
-    border-top: none;
-    border-right: none;
-    border-left: none;   
 }
 
-
-.form__label-two {
-    display: flex;
-    /* border: 2px solid green; */
-    align-items: flex-start;
-    margin-bottom: 5px;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.form__input-two {
-    display: flex;
+.form__field {
     width: 100%;
-    padding: 5px 12px 5px 0px;
-    font-size: 16px;
-    margin-bottom: 19px;
-    border-top: none;
-    border-right: none;
-    border-left: none;   
 }
 
-.form__input-one.click:hover {
+.form__field label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: #110955;
+    text-align: left;
+}
+
+.form__field input {
+    width: 100%;
+    height: 50px;
+    padding: 10px 15px;
+
+    font-size: 1.8rem;
+    font-family: "Roboto", sans-serif;
+
     border: none;
+    border-bottom: 2px solid #110955;
+    outline: none;
+
+    background-color: transparent;
+
+    transition: border-color 0.2s ease;
 }
 
-.inves__form-list:active {
-    border-color: none;
+.form__field input:focus {
+    border-bottom: 3px solid #c385d8;
+}
+
+.form__field input::placeholder {
+    color: #a29f9f;
+}
+
+/* Submit button */
+
+.form__submit {
+    grid-column: 1 / -1;
+
+    width: 200px;
+    margin: 10px auto 0;
+    padding: 14px 30px;
+
+    background-color: #ffe41b;
+    color: #110955;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+        transform 0.2s ease;
+    position: relative;
+    right: 44%;
+    margin-top: 20px;
+}
+
+.form__submit::after {
+    content: "\2192";
+    /* border: 2px solid red; */
+    margin-left: 9px;
+    
+}
+
+.form__submit:hover {
+  background-color: #d4a70c;
+  color: white;
+  transform: translateY(-2px);
+}
+
+textarea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* resize: vertical; */
+    width: 100%;
+    font-size: 23px;
+    border-radius: 5px;
+    margin-top: 1.2rem;
+}
+
+.form__field input:focus {
+    border-color: #35189d;
+}
+
+.form__field input:hover {
+    border-color: rgb(255, 98, 0);
+}
+
+.form__field textarea {
+    resize: vertical;
+}
+
+.form__bottom {
+    display: flex;
+    text-align: left;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    right: 86%;
+    bottom: 15%
+}
+
+.contruction-build {
+    margin-top: 40px;
+    width: 70%;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+}
+
+.contruction-build:hover {
+    opacity: 0;
+    position: absolute;
+}
+
+.image__plan-house:hover {
+   box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
+   opacity: 1;
+}
+
+.description__contruction-house {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+}
+
+.funiture__wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* width: 90%; */
+    opacity: 0;
+}
+
+.image__plan-house:hover, .funiture-plans {
+    opacity: 1;
+}
+
+.funiture-plans {
+    position: relative;
+    top: 50%;
+}
+
+.funiture-plans:hover {
+    opacity: 1;
+}
+
+.description__para:hover {
+    opacity: 1;
+    z-index: 100;
+}
+
+.description__para {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* transform: translate(-50%, -50%); */
+  /* width: 90%; */
+  opacity: 0;
 }
