@@ -661,3 +661,15 @@ textarea {
 .color {
     font-size: 2.5rem;
 }
+
+.footer__social--section {
+    display: block;
+    font-size: 4.0rem;
+    margin-top: 1.5rem;
+    color: rgb(34, 14, 215);
+}
+
+.footer__social--section:hover {
+   color: lightsalmon;
+   transition: all 300ms ease-in;
+}
